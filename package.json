@@ -1,0 +1,23 @@
+{
+  "name": "udemy-cypress",
+  "version": "1.0.0",
+  "description": "This is going go to be project for udemy about Cypress.Io",
+  "main": "index.js",
+  "scripts": {
+    "runner": "cypress open --e2e --browser chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dalaran78/udemy-cypress.git"
+  },
+  "author": "Serge Niko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dalaran78/udemy-cypress/issues"
+  },
+  "homepage": "https://github.com/dalaran78/udemy-cypress#readme",
+  "devDependencies": {
+    "cypress": "^13.6.6",
+    "typescript": "^5.4.2"
+  }
+}
