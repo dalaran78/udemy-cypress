@@ -4,7 +4,7 @@
   "description": "This is going go to be project for udemy about Cypress.Io",
   "main": "index.js",
   "scripts": {
-    "runner": "cypress open --e2e --browser chrome"
+    "runner": "cypress open --e2e --browser chrome --config baseUrl=https://uitestingplayground.com"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,10 @@
   "homepage": "https://github.com/dalaran78/udemy-cypress#readme",
   "devDependencies": {
     "cypress": "^13.6.6",
+    "cypress-real-events": "^1.12.0",
     "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@cypress/xpath": "^2.0.3"
   }
 }
