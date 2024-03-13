@@ -1,4 +1,3 @@
-require("@cypress/xpath");
 // ***********************************************************
 // This example support/e2e.ts is processed and
 // loaded automatically before your test files.
@@ -16,6 +15,8 @@ require("@cypress/xpath");
 
 // Import commands.js using ES2015 syntax:
 import "./commands";
+import "./exceptions";
 import "cypress-real-events";
+require("@cypress/xpath");
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

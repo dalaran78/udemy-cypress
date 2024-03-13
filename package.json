@@ -4,7 +4,7 @@
   "description": "This is going go to be project for udemy about Cypress.Io",
   "main": "index.js",
   "scripts": {
-    "runner": "cypress open --e2e --browser chrome --config baseUrl=https://uitestingplayground.com"
+    "runner": "cypress open --e2e --browser chrome --config baseUrl=https://uitestingplayground.com --env demoVar=Hello_From_Pacjage_File"
   },
   "repository": {
     "type": "git",

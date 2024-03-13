@@ -1,4 +1,4 @@
-describe.skip("Click Chellange", () => {
+describe("Click Chellange", () => {
   beforeEach(() => {
     cy.visit("/click");
   });
@@ -21,5 +21,33 @@ describe("Hover challenge", () => {
   });
   it("hover with cypress workaround", () => {
     cy.get(".text-primary").realHover();
+  });
+});
+
+describe("Dynamic table challenge", () => {
+  beforeEach(() => {
+    cy.visit("/dynamictable");
+  });
+  it("Chrome CPU Test", () => {
+    cy.get(`div[role="row"] span`).each(($cell) => {
+      if ($cell.text().includes("Chrome")) {
+        cy.log(`I have found the ${$cell.text()} row!`);
+        let chromeRowValues: string[] = [];
+        chromeRowValues.push($cell.next().text());
+        chromeRowValues.push($cell.next().next().text());
+        chromeRowValues.push($cell.next().next().next().text());
+        chromeRowValues.push($cell.next().next().next().next().text());
+        cy.log("Chrome row values", chromeRowValues);
+        chromeRowValues.forEach((chromeValue) => {
+          if (chromeValue.includes("%")) {
+            cy.log(chromeValue);
+            cy.get(".bg-warning").should(
+              "have.text",
+              `Chrome CPU: ${chromeValue}`
+            );
+          }
+        });
+      }
+    });
   });
 });
